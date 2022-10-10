@@ -13,6 +13,8 @@ export default defineConfig({
     },
 
     build: {
-        assetsInlineLimit: (64 * 1024) * 1024,
+        assetsInlineLimit: 64 * 1024 * 1024,
     },
+
+    base: "./",
 });

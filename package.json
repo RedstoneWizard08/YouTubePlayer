@@ -8,7 +8,9 @@
         "build": "tsc && vite build",
         "preview": "vite preview",
         "fmt": "prettier --write .",
-        "serve": "serve dist"
+        "serve": "serve dist",
+        "zip": "zip -r dist.zip dist",
+        "serve:zip": "mkdir out && zip -r out/dist.zip dist && serve out"
     },
     "devDependencies": {
         "@types/node": "^18.8.3",

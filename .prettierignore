@@ -1,12 +1,14 @@
 .git/
 dist/
 node_modules/
+out/
 
 *.ogg
 *.png
 *.jpg
 *.jpeg
 *.md
+*.zip
 
 LICENSE
 

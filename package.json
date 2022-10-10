@@ -1,0 +1,28 @@
+{
+    "name": "yt-player",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "fmt": "prettier --write .",
+        "serve": "serve dist"
+    },
+    "devDependencies": {
+        "@types/node": "^18.8.3",
+        "@types/wicg-mediasession": "^1.1.4",
+        "@typescript-eslint/eslint-plugin": "^5.39.0",
+        "@typescript-eslint/parser": "^5.39.0",
+        "eslint": "^8.25.0",
+        "prettier": "^2.7.1",
+        "sass": "^1.55.0",
+        "serve": "^14.0.1",
+        "typescript": "^4.6.4",
+        "vite": "^3.1.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.0"
+    }
+}

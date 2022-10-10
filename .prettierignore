@@ -1,0 +1,14 @@
+.git/
+dist/
+node_modules/
+
+*.ogg
+*.png
+*.jpg
+*.jpeg
+*.md
+
+LICENSE
+
+pnpm-lock.yaml
+package-lock.json

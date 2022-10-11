@@ -3,7 +3,7 @@
         "target": "ESNext",
         "useDefineForClassFields": true,
         "module": "CommonJS",
-        "lib": ["ESNext", "DOM"],
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "moduleResolution": "Node",
         "strict": true,
         "sourceMap": true,
@@ -15,7 +15,11 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "skipLibCheck": true,
-        "types": ["node", "wicg-mediasession"]
+        "types": ["node", "wicg-mediasession"],
+        "declaration": true,
+        "declarationMap": true,
+        "inlineSourceMap": false,
+        "allowSyntheticDefaultImports": true
     },
-    "include": ["src"]
+    "include": ["src", "esbuild.config.ts"]
 }

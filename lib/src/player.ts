@@ -1,14 +1,16 @@
-import { PlayerMetadata, SourceInfo } from "./types";
+import { PlaylistPlayer } from "./playlist";
+import { PlayerMetadata, SourceInfo, VideoData } from "./types";
 
-export class YouTubePlayer {
-    private element: HTMLVideoElement | HTMLAudioElement;
-    private loop: boolean;
-    private autoPlay: boolean;
-    private sources: SourceInfo[];
-    private duration: number;
-    private showPoster: boolean;
-    private buttons: { [key: string]: HTMLButtonElement };
+export class YouTubeMediaPlayer extends EventTarget {
+    private element?: HTMLVideoElement;
+    private loop?: boolean;
+    private autoPlay?: boolean;
+    private sources?: SourceInfo[];
+    private duration?: number;
+    private showPoster?: boolean;
+    private buttons?: { [key: string]: HTMLButtonElement };
 
+    private source: VideoData;
     private progress?: HTMLInputElement;
     private timer?: NodeJS.Timer;
     private interval?: NodeJS.Timer;
@@ -16,51 +18,115 @@ export class YouTubePlayer {
     private container?: HTMLDivElement;
     private video?: HTMLVideoElement;
     private controls?: HTMLDivElement;
+    private timerInfo?: HTMLParagraphElement;
+    private title?: HTMLParagraphElement;
+    private changePlayVideo?: boolean;
 
     private metadata: PlayerMetadata;
+    public playlist?: PlaylistPlayer;
 
     public constructor(
-        element: HTMLElement | string,
-        metadata: PlayerMetadata
+        source: VideoData,
+        metadata: PlayerMetadata,
+        playlist?: PlaylistPlayer
     ) {
-        this.element =
-            element instanceof HTMLVideoElement ||
-            element instanceof HTMLAudioElement
-                ? element
-                : document.querySelector(element as string)!;
+        super();
 
-        this.loop = true;
+        this.source = source;
+        this.metadata = metadata;
+        this.playlist = playlist;
+
+        this.init(false);
+    }
+
+    public async setVideo(data: VideoData, play?: boolean) {
+        this.element = document.createElement("video");
+        const source = document.createElement("source");
+
+        this.element.style.display = "none";
+
+        source.src = data.source;
+        this.element.poster = data.poster;
+
+        const promise = new Promise((resolve) =>
+            this.element?.addEventListener("canplay", resolve)
+        );
+
+        this.element.appendChild(source);
+        this.container?.appendChild(this.element);
+
+        await promise;
+
+        this.loop = false;
         this.autoPlay = false;
+        this.changePlayVideo =
+            play === undefined || play === null ? true : play;
 
         this.sources = [];
         this.duration = 0;
         this.showPoster = false;
         this.buttons = {};
 
-        this.metadata = metadata;
+        this.metadata = data;
+        this.source = data;
 
-        this.init();
+        this.addEventListener("ready", this.onChangeReady.bind(this));
+
+        this.init(true);
     }
 
-    private init() {
+    private onChangeReady() {
+        this.removeEventListener("ready", this.onChangeReady.bind(this));
+
+        this.setupMetadata();
+
+        if (this.changePlayVideo) this.play();
+    }
+
+    private async init(skip?: boolean) {
+        this.element = document.createElement("video");
+        const source = document.createElement("source");
+
+        source.src = this.source.source;
+        this.element.poster = this.source.poster;
+        this.element.style.display = "none";
+
+        const promise = new Promise((resolve) =>
+            this.element?.addEventListener("canplay", resolve)
+        );
+
+        this.element.appendChild(source);
+        document.body.appendChild(this.element);
+
+        await promise;
+
+        this.loop = false;
+        this.autoPlay = false;
+
+        this.sources = [];
+        this.duration = this.element.duration;
+        this.showPoster = false;
+        this.buttons = {};
+
         // Get our source elements.
-        const sourceElements = this.element.querySelectorAll("source");
+        const sourceElements = this.element.getElementsByTagName("source");
         const sources: SourceInfo[] = [];
 
         // Get all the sources and re-format them.
-        sourceElements.forEach((source) =>
+        for (let i = 0; i < sourceElements.length; i++) {
             sources.push({
-                type: source.type || this.getSourceType(source.src),
-                source: source.src,
-            })
-        );
+                type:
+                    sourceElements[i].type ||
+                    this.getSourceType(sourceElements[i].src),
+                source: sourceElements[i].src,
+            });
+        }
 
         // Make it accessable.
         this.sources = sources;
 
         // Get our poster.
-        if (this.element instanceof HTMLVideoElement)
-            this.poster = this.element.poster;
+        this.poster = this.element.poster;
 
         // Get the duration.
         this.duration = this.element.duration;
@@ -69,45 +135,64 @@ export class YouTubePlayer {
         this.element.style.display = "none";
 
         // Render our player.
-        this.render();
+        this.render(skip);
     }
 
-    private render() {
+    private render(skip?: boolean) {
+        // Get the old video and controls if they exist.
+        const oldVideo = this.video;
+        const oldControls = this.controls;
+
         // Set up the container, video element, and the controls container.
-        this.container = document.createElement("div");
-        this.video = document.createElement("video");
+        if (!skip) this.container = document.createElement("div");
+
         this.controls = document.createElement("div");
+        this.video = document.createElement("video");
 
         // Set their class names.
-        this.container.className = "youtube-player";
-        this.controls.className = "youtube-player-controls";
-        this.video.className = "youtube-player-poster";
+        this.container!.className =
+            "youtube-player" + (this.playlist ? " as-playlist" : "");
+        this.controls!.className =
+            "youtube-player-controls" + (this.playlist ? " as-playlist" : "");
+        this.video!.className = "youtube-player-poster";
 
         // If we have a poster, apply it.
-        if (this.poster) this.video.poster = this.poster;
+        if (this.poster) this.video!.poster = this.poster;
 
         // Set the default settings.
-        this.video.volume = 1;
+        this.video!.volume = 1;
         this.showPoster = true;
 
         // Create the source elements from the original video.
         const sources = this.createSources();
 
+        // Remove all previous sources.
+        const originalSources = this.video!.getElementsByTagName("source");
+        for (let i = 0; i < originalSources.length; i++)
+            originalSources[i].remove();
+
         // Apply them to our video.
-        for (const source of sources) this.video.appendChild(source);
+        for (const source of sources) this.video!.appendChild(source);
+
+        // Initialize the title.
+        this.createTitle();
 
         // Initialize our controls.
         this.createControls();
 
         // Append all the children.
-        this.container.appendChild(this.video);
-        this.container.appendChild(this.controls);
+        if (oldVideo) this.container!.replaceChild(this.video!, oldVideo);
+        else this.container!.appendChild(this.video!);
+
+        if (oldControls)
+            this.container!.replaceChild(this.controls!, oldControls);
+        else this.container!.appendChild(this.controls!);
 
         // Insert our player.
-        document.body.insertBefore(this.container, this.element);
+        if (!skip) document.body.insertBefore(this.container!, this.element!);
 
         // Remove the old player.
-        this.element.remove();
+        this.element?.remove();
 
         // Attach our events.
         this.attachEvents();
@@ -120,6 +205,20 @@ export class YouTubePlayer {
 
         // Auto-play.
         this.triggerAutoPlay();
+
+        this.dispatchEvent(new Event("ready"));
+    }
+
+    private createTitle() {
+        if (this.title) this.title.remove();
+
+        this.title = document.createElement("p");
+
+        this.title.className = "youtube-player-title";
+
+        this.title.innerHTML = `${this.metadata.title} - ${this.metadata.artist}`;
+
+        this.container?.prepend(this.title);
     }
 
     private createControls() {
@@ -130,6 +229,9 @@ export class YouTubePlayer {
         const fullscreen = document.createElement("button");
         const pictureInPicture = document.createElement("button");
 
+        // Create our timer.
+        const timer = document.createElement("p");
+
         // Set their class names.
         play.className = "youtube-player-button youtube-player-play";
         volume.className = "youtube-player-button youtube-player-volume";
@@ -137,11 +239,13 @@ export class YouTubePlayer {
         fullscreen.className =
             "youtube-player-button youtube-player-fullscreen";
         pictureInPicture.className = "youtube-player-button youtube-player-pip";
+        timer.className = "youtube-player-time";
 
         // Append them to our controls.
         this.controls?.appendChild(play);
         this.controls?.appendChild(volume);
         this.controls?.appendChild(progress);
+        this.controls?.appendChild(timer);
         this.controls?.appendChild(pictureInPicture);
         this.controls?.appendChild(fullscreen);
 
@@ -154,7 +258,7 @@ export class YouTubePlayer {
 
         // Set up the progress bar.
         progress.min = "0";
-        progress.max = this.duration.toString();
+        progress.max = (this.duration || 0).toString();
         progress.value = "0";
         progress.step = "0.000001";
 
@@ -163,6 +267,7 @@ export class YouTubePlayer {
         fullscreen.innerHTML = `<i class="fa-solid fa-expand"></i>`;
         play.innerHTML = `<i class="fa-solid fa-play"></i>`;
         volume.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
+        timer.innerHTML = `-${this.getFormattedDuration()}`;
 
         // Make them accessable.
 
@@ -174,6 +279,31 @@ export class YouTubePlayer {
         };
 
         this.progress = progress;
+        this.timerInfo = timer;
+    }
+
+    private getFormattedDuration() {
+        const _seconds = (this.duration || 0) - (this.video?.currentTime || 0);
+        let hours: string | number = Math.floor(_seconds / 3600);
+        let minutes: string | number = Math.floor(
+            (_seconds - hours * 3600) / 60
+        );
+        let seconds: string | number = Math.floor(
+            _seconds - hours * 3600 - minutes * 60
+        );
+
+        if (hours < 10) hours = `0${hours}`;
+        if (minutes < 10) minutes = `0${minutes}`;
+        if (seconds < 10) seconds = `0${seconds}`;
+
+        let result = "";
+
+        if (hours > 0) result += `${hours}:`;
+
+        result += `${minutes}:`;
+        result += seconds;
+
+        return result;
     }
 
     private attachEvents() {
@@ -184,7 +314,7 @@ export class YouTubePlayer {
         );
         this.buttons?.pictureInPicture.addEventListener(
             "click",
-            this.requestPictureInPicture.bind(this)
+            this.togglePictureInPicture.bind(this)
         );
 
         // Play button events.
@@ -210,6 +340,16 @@ export class YouTubePlayer {
         this.video?.addEventListener("pause", this.onVideoPause.bind(this));
         this.video?.addEventListener("click", this.togglePlay.bind(this));
         this.video?.addEventListener("contextmenu", this.noopEvent.bind(this));
+
+        this.video?.addEventListener(
+            "enterpictureinpicture",
+            this.onPictureInPictureActivate.bind(this)
+        );
+
+        this.video?.addEventListener(
+            "leavepictureinpicture",
+            this.onPictureInPictureDeactivate.bind(this)
+        );
 
         // Progress events.
         this.progress?.addEventListener(
@@ -244,6 +384,23 @@ export class YouTubePlayer {
             "mousemove",
             this.resetControlsTimer.bind(this)
         );
+
+        // Full screen change event.
+        document.addEventListener(
+            "fullscreenchange",
+            this.onFullscreenChange.bind(this)
+        );
+    }
+
+    private onPictureInPictureActivate() {
+        // this.notices.pip = document.createElement("p");
+        // this.notices.pip.innerHTML = "Playing Picture-In-Picture";
+        // this.notices.pip.className = "youtube-player-pip-info";
+        // this.container?.appendChild(this.notices.pip);
+    }
+
+    private onPictureInPictureDeactivate() {
+        // this.notices.pip.remove();
     }
 
     private resetControlsTimer() {
@@ -254,12 +411,16 @@ export class YouTubePlayer {
         this.timer = setTimeout(
             (() => {
                 if (this.controls) this.controls.style.opacity = "0";
+                if (this.title) this.title.style.opacity = "0";
             }).bind(this),
             3000
         );
 
         // Reset the controls' opacity.
         if (this.controls) this.controls.style.opacity = "1";
+
+        // Reset the title's opacity.
+        if (this.title) this.title.style.opacity = "1";
     }
 
     private setupMetadata() {
@@ -268,13 +429,6 @@ export class YouTubePlayer {
             // Set our metadata!
             navigator.mediaSession.metadata = new MediaMetadata({
                 ...this.metadata,
-                artwork: [
-                    {
-                        src: this.poster!,
-                        type: "image/png",
-                        sizes: "1920x1080",
-                    },
-                ],
             });
 
             // Set our action handlers.
@@ -308,6 +462,18 @@ export class YouTubePlayer {
                 "seekto",
                 this.seekTo.bind(this)
             );
+
+            if (this.playlist) {
+                navigator.mediaSession.setActionHandler(
+                    "nexttrack",
+                    this.playlist.next.bind(this.playlist)
+                );
+
+                navigator.mediaSession.setActionHandler(
+                    "previoustrack",
+                    this.playlist.previous.bind(this.playlist)
+                );
+            }
         }
     }
 
@@ -358,6 +524,9 @@ export class YouTubePlayer {
     private updateVideoTime() {
         if (this.video)
             this.video.currentTime = parseInt(this.progress?.value || "0");
+
+        if (this.timerInfo)
+            this.timerInfo.innerHTML = `-${this.getFormattedDuration()}`;
     }
 
     private triggerAutoPlay() {
@@ -371,6 +540,8 @@ export class YouTubePlayer {
 
             this.video?.play().then(this.setupMetadata.bind(this));
         }
+
+        this.dispatchEvent(new Event("ended"));
     }
 
     public togglePlay() {
@@ -397,6 +568,9 @@ export class YouTubePlayer {
         }
 
         this.updateGradient();
+
+        if (this.timerInfo)
+            this.timerInfo.innerHTML = `-${this.getFormattedDuration()}`;
     }
 
     public play() {
@@ -438,7 +612,7 @@ export class YouTubePlayer {
                 break;
 
             case "KeyI":
-                this.requestPictureInPicture();
+                this.togglePictureInPicture();
                 break;
         }
 
@@ -452,26 +626,37 @@ export class YouTubePlayer {
         this.resetControlsTimer();
     }
 
-    private toggleFullscreen() {
+    private onFullscreenChange() {
+        if (!document.fullscreenElement) {
+            this.buttons!.fullscreen.innerHTML = `<i class="fa-solid fa-expand"></i>`;
+
+            if (this.playlist) {
+                this.container?.classList.add("as-playlist");
+                this.controls?.classList.add("as-playlist");
+            }
+        }
+
         if (document.fullscreenElement) {
-            document.exitFullscreen().then(
-                (() => {
-                    if (!document.fullscreenElement)
-                        this.buttons.fullscreen.innerHTML = `<i class="fa-solid fa-expand"></i>`;
-                }).bind(this)
-            );
-        } else {
-            this.container?.requestFullscreen().then(
-                (() => {
-                    if (document.fullscreenElement)
-                        this.buttons.fullscreen.innerHTML = `<i class="fa-solid fa-compress"></i>`;
-                }).bind(this)
-            );
+            this.buttons!.fullscreen.innerHTML = `<i class="fa-solid fa-compress"></i>`;
+
+            if (this.playlist) {
+                this.container?.classList.remove("as-playlist");
+                this.controls?.classList.remove("as-playlist");
+            }
         }
     }
 
-    private requestPictureInPicture() {
-        this.video?.requestPictureInPicture();
+    public toggleFullscreen() {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        } else {
+            this.container?.requestFullscreen();
+        }
+    }
+
+    public togglePictureInPicture() {
+        if (document.pictureInPictureElement) document.exitPictureInPicture();
+        else this.video?.requestPictureInPicture();
     }
 
     private createUpdateLoop() {
@@ -500,6 +685,8 @@ export class YouTubePlayer {
     }
 
     private getSourceType(src: string) {
+        if (src.startsWith("data:")) return src.split(":")[1].split(";")[0];
+
         const ext = src.split(".")[src.split(".").length - 1].toLowerCase();
 
         switch (ext) {
@@ -522,7 +709,7 @@ export class YouTubePlayer {
 
         const percentage =
             ((this.video.currentTime - parseInt(this.progress.min || "0")) /
-                (this.duration - parseInt(this.progress.min || "0"))) *
+                ((this.duration || 0) - parseInt(this.progress.min || "0"))) *
             100;
 
         const backgroundImage = `linear-gradient(
@@ -532,5 +719,21 @@ export class YouTubePlayer {
         )`;
 
         this.progress.style.backgroundImage = backgroundImage;
+    }
+
+    public get isFullscreen() {
+        return document.fullscreenElement == this.container;
+    }
+
+    public get isPictureInPicture() {
+        return document.pictureInPictureElement == this.video;
+    }
+
+    public get isPlaying() {
+        return !this.video?.paused;
+    }
+
+    public dispose() {
+        this.container?.remove();
     }
 }

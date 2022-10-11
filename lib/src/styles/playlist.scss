@@ -1,0 +1,78 @@
+.youtube-playlist {
+    background-color: #1f2120;
+
+    width: 27.5%;
+    min-height: 81.4%;
+
+    position: absolute;
+    z-index: 1000;
+
+    padding: 1% 1%;
+    margin-left: 70.5%;
+
+    .youtube-playlist-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+
+        padding: 1% 1%;
+        margin: 1% 1%;
+
+        height: 6rem;
+
+        background-color: #3c3c3c;
+        border-radius: 8px;
+
+        cursor: pointer;
+        user-select: none;
+
+        transition: background-color 0.5s ease;
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+
+            object-fit: cover;
+            margin: 2%;
+
+            border-radius: 8px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: flex-end;
+
+            color: white;
+            font-family: Helvetica;
+            font-weight: 550;
+
+            width: 100%;
+
+            margin: 0% 2%;
+
+            p {
+                margin: 1%;
+            }
+        }
+
+        i {
+            color: white;
+            margin: 4% 6%;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 4%;
+        }
+
+        &.current {
+            background-color: #5c5c5c;
+        }
+
+        &:hover {
+            background-color: #6c6c6c;
+        }
+    }
+}

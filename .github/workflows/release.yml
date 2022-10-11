@@ -1,0 +1,49 @@
+name: Publish Package to npmjs
+on:
+  release:
+    types: [created]
+
+jobs:
+  # publish-npm:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 🚀 Checkout
+  #       uses: actions/checkout@v3
+
+  #     - name: 🔧 Configure
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: "16.x"
+  #         registry-url: "https://registry.npmjs.org"
+
+  #     - name: ⚙️ Install
+  #       run: cd lib && npm install
+
+  #     - name: 📤 Publish
+  #       run: cd lib && npm publish --access public
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-github:
+    runs-on: ubuntu-latest 
+    permissions: 
+      contents: read
+      packages: write 
+    steps:
+      - name: 🚀 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🔧 Configure
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@redstonewizard08"
+
+      - name: ⚙️ Install
+        run: cd lib && npm install
+
+      - name: 📤 Publish
+        run: cd lib && npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

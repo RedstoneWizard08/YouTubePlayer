@@ -8,7 +8,7 @@
         "preview": "vite preview",
         "fmt": "prettier --write .",
         "serve": "serve dist",
-        "zip": "zip -r dist.zip dist",
+        "zip": "zip -r dist/dist.zip dist",
         "serve:zip": "mkdir out && zip -r out/dist.zip dist && serve out",
         "lint": "eslint .",
         "console": "ts-node test/console.ts",

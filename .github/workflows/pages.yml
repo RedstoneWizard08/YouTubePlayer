@@ -1,0 +1,30 @@
+name: Build and Deploy
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 Checkout
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Install and Build
+        run: |
+          cd lib
+          npm install
+          npm run build
+
+          cd ..
+          npm install
+          npm run build
+          npm run zip
+
+      - name: 📤 Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist

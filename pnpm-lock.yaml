@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fortawesome/fontawesome-free': ^6.2.0
-  '@redstonewizard08/youtube-player': link:lib
+  '@redstonewizard08/youtube-player': file:lib
   '@types/node': ^18.8.3
   '@types/wicg-mediasession': ^1.1.4
   '@typescript-eslint/eslint-plugin': ^5.39.0
@@ -19,7 +19,7 @@ specifiers:
 
 dependencies:
   '@fortawesome/fontawesome-free': 6.2.0
-  '@redstonewizard08/youtube-player': link:lib
+  '@redstonewizard08/youtube-player': file:lib
 
 devDependencies:
   '@types/node': 18.8.3
@@ -2005,6 +2005,10 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
+  /tslib/2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+    dev: false
+
   /tsutils/3.21.0_typescript@4.8.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
@@ -2176,3 +2180,12 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  file:lib:
+    resolution: {directory: lib, type: directory}
+    name: '@redstonewizard08/youtube-player'
+    version: 1.0.1
+    dependencies:
+      '@fortawesome/fontawesome-free': 6.2.0
+      tslib: 2.4.0
+    dev: false

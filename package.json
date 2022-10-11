@@ -31,7 +31,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.2.0",
-        "@redstonewizard08/youtube-player": "link:lib"
+        "@redstonewizard08/youtube-player": "file:lib"
     },
     "repository": {
         "type": "git",

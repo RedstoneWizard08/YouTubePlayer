@@ -1,7 +1,5 @@
-name: Publish Package to npmjs
-on:
-  release:
-    types: [created]
+name: Publish Package
+on: [push]
 
 jobs:
   # publish-npm:

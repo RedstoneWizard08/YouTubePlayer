@@ -1,6 +1,6 @@
 {
     "name": "@redstonewizard08/youtube-player",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "private": false,
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",

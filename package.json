@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build && pnpm build:finalize",
+        "build": "tsc && vite build && ts-node build/finalize.ts",
         "preview": "vite preview",
         "fmt": "prettier --write .",
         "serve": "serve dist",

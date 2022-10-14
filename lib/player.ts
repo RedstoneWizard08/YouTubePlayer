@@ -712,11 +712,7 @@ export class YouTubeMediaPlayer extends EventTarget {
                 ((this.duration || 0) - parseInt(this.progress.min || "0"))) *
             100;
 
-        const backgroundImage = `linear-gradient(
-            90deg,
-            #cc0404 ${percentage}%,
-            transparent ${percentage}%
-        )`;
+        const backgroundImage = `linear-gradient(90deg, #cc0404 ${percentage}%, transparent ${percentage}%)`;
 
         this.progress.style.backgroundImage = backgroundImage;
     }

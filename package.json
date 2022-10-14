@@ -1,18 +1,21 @@
 {
-    "name": "yt-player",
+    "name": "@redstonewizard08/youtube-player",
     "private": false,
-    "version": "0.0.0",
+    "version": "1.1.0",
+    "main": "dist/lib/index.js",
+    "module": "dist/lib/index.es.js",
+    "browser": "dist/lib/index.umd.js",
+    "types": "dist/lib/index.d.ts",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build && ts-node build/finalize.ts",
-        "preview": "vite preview",
+        "dev": "vite --config vite/web.ts",
+        "build:lib": "tsc && vite --config vite/library.ts build",
+        "build:web": "tsc && vite --config vite/web.ts build",
+        "build": "npm run build:lib && npm run build:web",
+        "preview": "vite --config vite/web.ts preview",
         "fmt": "prettier --write .",
-        "serve": "serve dist",
-        "zip": "zip -r dist/dist.zip dist",
-        "serve:zip": "mkdir out && zip -r out/dist.zip dist && serve out",
+        "serve": "serve dist/web",
         "lint": "eslint .",
-        "console": "ts-node test/console.ts",
-        "build:finalize": "ts-node build/finalize.ts"
+        "console": "ts-node test/console.ts"
     },
     "devDependencies": {
         "@types/node": "^18.8.3",
@@ -25,13 +28,16 @@
         "puppeteer": "^18.2.1",
         "sass": "^1.55.0",
         "serve": "^14.0.1",
+        "terser": "^5.15.1",
         "ts-node": "^10.9.1",
         "typescript": "^4.6.4",
-        "vite": "^3.1.0"
+        "vite": "^3.1.0",
+        "vite-plugin-css-injected-by-js": "^2.1.0",
+        "vite-plugin-dts": "^1.6.6"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.2.0",
-        "@redstonewizard08/youtube-player": "file:lib"
+        "tslib": "^2.4.0"
     },
     "repository": {
         "type": "git",

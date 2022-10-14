@@ -15,7 +15,8 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "skipLibCheck": true,
-        "types": ["node", "wicg-mediasession"]
+        "types": ["node", "wicg-mediasession"],
+        "importHelpers": true
     },
-    "include": ["src"]
+    "include": ["src", "lib"]
 }

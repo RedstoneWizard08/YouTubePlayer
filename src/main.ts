@@ -1,11 +1,12 @@
 // Styles
-import "@redstonewizard08/youtube-player/dist/esm/index.css";
+import "../lib/styles/index.scss";
+import "../lib/styles/playlist.scss";
 
 // Import our videos.
 import { hyg } from "./videos";
 
 // Import the player.
-import YouTubePlayer, { VideoData } from "@redstonewizard08/youtube-player";
+import YouTubePlayer, { type VideoData } from "../lib";
 
 window.addEventListener("load", () => {
     const videos: VideoData[] = [

@@ -14,7 +14,7 @@ import { YouTubeMediaPlayer } from "./player";
 import { PlaylistPlayer } from "./playlist";
 
 // Create the utility class.
-export class YouTubePlayer {
+class YouTubePlayer {
     public static createPlayer(source: VideoData, metadata: PlayerMetadata) {
         return new YouTubeMediaPlayer(source, metadata);
     }
@@ -24,10 +24,13 @@ export class YouTubePlayer {
     }
 }
 
-// Export everything.
+Object.assign(YouTubePlayer, {
+    YouTubeMediaPlayer,
+    PlaylistPlayer,
+});
+
+// Export the types.
 export * from "./types";
-export * from "./player";
-export * from "./playlist";
 
 // Export the default utility.
 export default YouTubePlayer;

@@ -18,21 +18,21 @@ Install the dependency with your favorite package manager.
 
 ```bash
 cd my-website # or whatever folder you chose
-npm install youtube-player@https://github.com/RedstoneWizard08/YouTubePlayer
+npm install @redstonewizard08/youtube-player@https://github.com/RedstoneWizard08/YouTubePlayer
 ```
   </TabItem>
   <TabItem value="yarn" label="Yarn">
 
 ```bash
 cd my-website # or whatever folder you chose
-yarn add youtube-player@https://github.com/RedstoneWizard08/YouTubePlayer
+yarn add @redstonewizard08/youtube-player@https://github.com/RedstoneWizard08/YouTubePlayer
 ```
   </TabItem>
   <TabItem value="pnpm" label="PNPM">
 
 ```bash
 cd my-website # or whatever folder you chose
-pnpm install youtube-player@https://github.com/RedstoneWizard08/YouTubePlayer
+pnpm install @redstonewizard08/youtube-player@https://github.com/RedstoneWizard08/YouTubePlayer
 ```
   </TabItem>
 </Tabs>

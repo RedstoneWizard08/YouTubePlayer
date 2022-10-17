@@ -14,7 +14,7 @@ To use the library, use this code:
 
 ```js
 // Import the library
-const YouTubePlayer = require("youtube-player");
+const YouTubePlayer = require("@redstonewizard08/youtube-player");
 
 // Most build tools will allow you to import assets directly
 // as URLs (e.g. Vite, or Webpack with plugins, also rollup),
@@ -26,7 +26,7 @@ const video = require("../public/assets/hold_your_ground.mp4");
 // On window load, create our player.
 window.addEventListener("load", () => {
     // Define the videos.
-    /** @type {import("youtube-player").VideoData[]} */
+    /** @type {import("@redstonewizard08/youtube-player").VideoData[]} */
     const videos = [
         {
             album: "Stardew Valley - Roguelike Mod OST",
@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
 
 ```ts
 // Import the library
-import YouTubePlayer from "youtube-player";
+import YouTubePlayer from "@redstonewizard08/youtube-player";
 
 // Most build tools will allow you to import assets directly
 // as URLs (e.g. Vite, or Webpack with plugins, also rollup),
@@ -61,7 +61,7 @@ import video from "../public/assets/hold_your_ground.mp4";
 // On window load, create our player.
 window.addEventListener("load", () => {
     // Define the videos.
-    /** @type {import("youtube-player").VideoData[]} */
+    /** @type {import("@redstonewizard08/youtube-player").VideoData[]} */
     const videos = [
         {
             album: "Stardew Valley - Roguelike Mod OST",
@@ -84,7 +84,7 @@ window.addEventListener("load", () => {
 
 ```ts
 // Import the library
-import YouTubePlayer, { type VideoData } from "youtube-player";
+import YouTubePlayer, { type VideoData } from "@redstonewizard08/youtube-player";
 
 // Most build tools will allow you to import assets directly
 // as URLs (e.g. Vite, or Webpack with plugins, also rollup),

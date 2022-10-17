@@ -13,13 +13,13 @@ To import the library, use this code:
   <TabItem value="cjs" label="CommonJS Modules" default>
 
 ```js
-const YouTubePlayer = require("youtube-player");
+const YouTubePlayer = require("@redstonewizard08/youtube-player");
 ```
   </TabItem>
   <TabItem value="esm" label="ES Modules">
 
 ```ts
-import YouTubePlayer from "youtube-player";
+import YouTubePlayer from "@redstonewizard08/youtube-player";
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
@@ -27,7 +27,7 @@ import YouTubePlayer from "youtube-player";
 ```ts
 // Importing the "type VideoData" is optional, but it
 // allows you to type your variables more effectively.
-import YouTubePlayer, { type VideoData } from "youtube-player";
+import YouTubePlayer, { type VideoData } from "@redstonewizard08/youtube-player";
 ```
   </TabItem>
 </Tabs>

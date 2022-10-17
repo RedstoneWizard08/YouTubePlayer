@@ -13,7 +13,7 @@ Let's use the YouTube Player in your new project.
 
 ```typescript title="/src/main.ts"
 // Import the player.
-import YouTubePlayer, { type VideoData } from "youtube-player";
+import YouTubePlayer, { type VideoData } from "@redstonewizard08/youtube-player";
 
 // Import our video.
 import poster from "../public/assets/hold_your_ground.png";

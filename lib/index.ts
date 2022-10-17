@@ -19,8 +19,8 @@ class YouTubePlayer {
         return new YouTubeMediaPlayer(source, metadata);
     }
 
-    public static createPlaylistPlayer(sources: VideoData[]) {
-        return new PlaylistPlayer(sources);
+    public static createPlaylistPlayer(sources: VideoData[], root?: HTMLElement) {
+        return new PlaylistPlayer(sources, root);
     }
 }
 
@@ -34,3 +34,10 @@ export * from "./types";
 
 // Export the default utility.
 export default YouTubePlayer;
+
+// Export the utility.
+export { YouTubePlayer };
+
+// Export the classes.
+export * from "./player";
+export * from "./playlist";

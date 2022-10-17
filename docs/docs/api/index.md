@@ -1,3 +1,11 @@
+---
+id: "index"
+title: "@redstonewizard08/youtube-player"
+sidebar_label: "Readme"
+sidebar_position: 0
+custom_edit_url: null
+---
+
 # YouTubePlayer
 A terrible clone of the YouTube video player.
 

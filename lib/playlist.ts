@@ -6,10 +6,12 @@ export class PlaylistPlayer extends EventTarget {
     private currentVideo: number;
     private player?: YouTubeMediaPlayer;
     private container?: HTMLDivElement;
+    public root?: HTMLElement;
 
-    public constructor(videos: VideoData[]) {
+    public constructor(videos: VideoData[], root?: HTMLElement) {
         super();
 
+        this.root = root;
         this.videos = videos;
         this.currentVideo = 0;
 
@@ -75,7 +77,8 @@ export class PlaylistPlayer extends EventTarget {
             this.container.appendChild(element);
         }
 
-        document.body.prepend(this.container);
+        if (this.root) this.root.prepend(this.container);
+        else document.body.prepend(this.container);
     }
 
     private async init() {

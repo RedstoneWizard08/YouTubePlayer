@@ -96,7 +96,9 @@ export class YouTubeMediaPlayer extends EventTarget {
         );
 
         this.element.appendChild(source);
-        document.body.appendChild(this.element);
+        
+        if (this.playlist && this.playlist.root) this.playlist.root.appendChild(this.element);
+        else document.body.appendChild(this.element);
 
         await promise;
 

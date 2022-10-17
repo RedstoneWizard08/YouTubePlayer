@@ -18,7 +18,11 @@ jobs:
                   npm install
                   npm run build
 
+                  cd docs
+                  npm install
+                  npm run build
+
             - name: 📤 Deploy
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  folder: dist/web
+                  folder: docs/build

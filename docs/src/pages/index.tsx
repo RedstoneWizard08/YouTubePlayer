@@ -25,7 +25,7 @@ function HomepageHeader() {
           </Link>
           <a
             className={`button button--secondary button--lg ${styles.button2}`}
-            href="/release/latest.zip">
+            href={`${siteConfig.baseUrl}${siteConfig.baseUrl.endsWith("/") ? "" : "/"}release/latest.zip`}>
             Download
           </a>
         </div>

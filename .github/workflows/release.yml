@@ -42,7 +42,7 @@ jobs:
                   scope: "@redstonewizard08"
 
             - name: ⚙️ Install
-              run: npm install
+              run: CI=true npm install --legacy-peer-deps
             
             - name: 🔨 Build
               run: npm run build

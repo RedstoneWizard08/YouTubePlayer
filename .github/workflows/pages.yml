@@ -15,11 +15,11 @@ jobs:
 
             - name: ⚙️ Install and Build
               run: |
-                  npm install
+                  CI=true npm install --legacy-peer-deps
                   npm run build
 
                   cd docs
-                  npm install
+                  CI=true npm install --legacy-peer-deps
                   npm run build
 
                   cp -r ../out ./build/release

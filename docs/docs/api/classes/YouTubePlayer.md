@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/index.ts:18](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/index.ts#L18)
+[lib/index.ts:18](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/index.ts#L18)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[lib/index.ts:22](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/index.ts#L22)
+[lib/index.ts:22](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/index.ts#L22)

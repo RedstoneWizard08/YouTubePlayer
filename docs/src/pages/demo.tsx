@@ -26,7 +26,9 @@ export const Hello = () => {
 
     return (
         <Layout title="Demo" description="Demo of the library">
-            <div ref={container} className={styles.demo} />
+            <main>
+                <div ref={container} className={styles.demo} />
+            </main>
         </Layout>
     );
 };

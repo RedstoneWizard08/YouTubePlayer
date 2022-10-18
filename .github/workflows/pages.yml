@@ -22,6 +22,9 @@ jobs:
                   npm install
                   npm run build
 
+                  cp -r ../out ./build/release
+                  mv build/release/*.zip build/release/latest.zip
+
             - name: 📤 Deploy
               uses: JamesIves/github-pages-deploy-action@v4
               with:

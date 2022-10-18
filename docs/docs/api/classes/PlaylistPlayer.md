@@ -31,7 +31,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[lib/playlist.ts:11](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L11)
+[lib/playlist.ts:11](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L11)
 
 ## Properties
 
@@ -41,7 +41,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[lib/playlist.ts:8](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L8)
+[lib/playlist.ts:8](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L8)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:6](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L6)
+[lib/playlist.ts:6](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L6)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:7](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L7)
+[lib/playlist.ts:7](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L7)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:9](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L9)
+[lib/playlist.ts:9](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L9)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:5](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L5)
+[lib/playlist.ts:5](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L5)
 
 ## Methods
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:26](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L26)
+[lib/playlist.ts:26](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L26)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:21](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L21)
+[lib/playlist.ts:21](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L21)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:84](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L84)
+[lib/playlist.ts:84](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L84)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:111](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L111)
+[lib/playlist.ts:111](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L111)
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:120](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L120)
+[lib/playlist.ts:120](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L120)
 
 ___
 
@@ -265,7 +265,7 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:38](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L38)
+[lib/playlist.ts:38](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L38)
 
 ___
 
@@ -285,4 +285,4 @@ ___
 
 #### Defined in
 
-[lib/playlist.ts:129](https://github.com/RedstoneWizard08/YouTubePlayer/blob/592ae14/lib/playlist.ts#L129)
+[lib/playlist.ts:129](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/playlist.ts#L129)

@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 
-import dts from "vite-plugin-dts";
 import css from "vite-plugin-css-injected-by-js";
 import path from "path";
 
@@ -29,5 +28,5 @@ export default defineConfig({
         emptyOutDir: true,
     },
 
-    plugins: [dts({ insertTypesEntry: true }), css()],
+    plugins: [css()],
 });

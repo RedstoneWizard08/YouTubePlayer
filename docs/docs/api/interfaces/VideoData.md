@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/types.ts:16](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L16)
+[lib/types.ts:16](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L16)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[lib/types.ts:15](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L15)
+[lib/types.ts:15](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L15)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[lib/types.ts:19](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L19)
+[lib/types.ts:19](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L19)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[lib/types.ts:18](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L18)
+[lib/types.ts:18](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L18)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[lib/types.ts:14](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L14)
+[lib/types.ts:14](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L14)

@@ -32,7 +32,21 @@ EventTarget.constructor
 
 #### Defined in
 
-[lib/player.ts:28](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L28)
+[lib/player.ts:28](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L28)
+
+___
+
+### constructor
+
+• **new YouTubeMediaPlayer**()
+
+#### Overrides
+
+EventTarget.constructor
+
+#### Defined in
+
+docs/node_modules/.pnpm/typescript@4.8.4/node_modules/typescript/lib/lib.dom.d.ts:5163
 
 ## Properties
 
@@ -42,7 +56,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[lib/player.ts:7](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L7)
+[lib/player.ts:7](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L7)
 
 ___
 
@@ -56,7 +70,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:11](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L11)
+[lib/player.ts:11](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L11)
 
 ___
 
@@ -66,7 +80,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:23](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L23)
+[lib/player.ts:23](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L23)
 
 ___
 
@@ -76,7 +90,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:18](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L18)
+[lib/player.ts:18](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L18)
 
 ___
 
@@ -86,7 +100,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:20](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L20)
+[lib/player.ts:20](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L20)
 
 ___
 
@@ -96,7 +110,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:9](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L9)
+[lib/player.ts:9](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L9)
 
 ___
 
@@ -106,7 +120,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:5](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L5)
+[lib/player.ts:5](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L5)
 
 ___
 
@@ -116,7 +130,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:16](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L16)
+[lib/player.ts:16](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L16)
 
 ___
 
@@ -126,7 +140,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:6](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L6)
+[lib/player.ts:6](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L6)
 
 ___
 
@@ -136,7 +150,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:25](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L25)
+[lib/player.ts:25](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L25)
 
 ___
 
@@ -146,7 +160,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:26](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L26)
+[lib/player.ts:26](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L26)
 
 ___
 
@@ -156,7 +170,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:17](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L17)
+[lib/player.ts:17](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L17)
 
 ___
 
@@ -166,7 +180,21 @@ ___
 
 #### Defined in
 
-[lib/player.ts:14](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L14)
+[lib/player.ts:14](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L14)
+
+___
+
+### prototype
+
+• **prototype**: `EventTarget`
+
+#### Inherited from
+
+EventTarget.prototype
+
+#### Defined in
+
+docs/node_modules/.pnpm/typescript@4.8.4/node_modules/typescript/lib/lib.dom.d.ts:5162
 
 ___
 
@@ -176,7 +204,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:10](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L10)
+[lib/player.ts:10](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L10)
 
 ___
 
@@ -186,7 +214,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:13](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L13)
+[lib/player.ts:13](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L13)
 
 ___
 
@@ -196,7 +224,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:8](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L8)
+[lib/player.ts:8](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L8)
 
 ___
 
@@ -206,7 +234,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:15](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L15)
+[lib/player.ts:15](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L15)
 
 ___
 
@@ -216,7 +244,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:21](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L21)
+[lib/player.ts:21](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L21)
 
 ___
 
@@ -226,7 +254,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:22](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L22)
+[lib/player.ts:22](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L22)
 
 ___
 
@@ -236,7 +264,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:19](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L19)
+[lib/player.ts:19](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L19)
 
 ## Accessors
 
@@ -250,7 +278,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:722](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L722)
+[lib/player.ts:722](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L722)
 
 ___
 
@@ -264,7 +292,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:726](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L726)
+[lib/player.ts:726](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L726)
 
 ___
 
@@ -278,7 +306,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:730](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L730)
+[lib/player.ts:730](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L730)
 
 ## Methods
 
@@ -332,7 +360,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:311](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L311)
+[lib/player.ts:311](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L311)
 
 ___
 
@@ -352,7 +380,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:522](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L522)
+[lib/player.ts:522](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L522)
 
 ___
 
@@ -366,7 +394,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:226](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L226)
+[lib/player.ts:226](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L226)
 
 ___
 
@@ -380,7 +408,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:674](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L674)
+[lib/player.ts:674](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L674)
 
 ___
 
@@ -394,7 +422,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:214](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L214)
+[lib/player.ts:214](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L214)
 
 ___
 
@@ -408,7 +436,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:664](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L664)
+[lib/player.ts:664](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L664)
 
 ___
 
@@ -422,7 +450,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:670](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L670)
+[lib/player.ts:670](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L670)
 
 ___
 
@@ -462,7 +490,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:734](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L734)
+[lib/player.ts:734](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L734)
 
 ___
 
@@ -476,7 +504,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:287](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L287)
+[lib/player.ts:287](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L287)
 
 ___
 
@@ -496,7 +524,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:689](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L689)
+[lib/player.ts:689](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L689)
 
 ___
 
@@ -516,7 +544,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:86](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L86)
+[lib/player.ts:86](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L86)
 
 ___
 
@@ -530,7 +558,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:539](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L539)
+[lib/player.ts:539](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L539)
 
 ___
 
@@ -550,7 +578,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:518](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L518)
+[lib/player.ts:518](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L518)
 
 ___
 
@@ -564,7 +592,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:78](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L78)
+[lib/player.ts:78](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L78)
 
 ___
 
@@ -578,7 +606,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:631](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L631)
+[lib/player.ts:631](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L631)
 
 ___
 
@@ -598,7 +626,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:596](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L596)
+[lib/player.ts:596](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L596)
 
 ___
 
@@ -618,7 +646,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:624](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L624)
+[lib/player.ts:624](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L624)
 
 ___
 
@@ -632,7 +660,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:397](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L397)
+[lib/player.ts:397](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L397)
 
 ___
 
@@ -646,7 +674,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:404](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L404)
+[lib/player.ts:404](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L404)
 
 ___
 
@@ -660,7 +688,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:504](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L504)
+[lib/player.ts:504](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L504)
 
 ___
 
@@ -674,7 +702,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:497](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L497)
+[lib/player.ts:497](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L497)
 
 ___
 
@@ -688,7 +716,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:592](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L592)
+[lib/player.ts:592](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L592)
 
 ___
 
@@ -702,7 +730,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:578](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L578)
+[lib/player.ts:578](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L578)
 
 ___
 
@@ -750,7 +778,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:143](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L143)
+[lib/player.ts:143](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L143)
 
 ___
 
@@ -764,7 +792,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:408](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L408)
+[lib/player.ts:408](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L408)
 
 ___
 
@@ -778,7 +806,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:486](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L486)
+[lib/player.ts:486](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L486)
 
 ___
 
@@ -792,7 +820,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:482](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L482)
+[lib/player.ts:482](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L482)
 
 ___
 
@@ -812,7 +840,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:490](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L490)
+[lib/player.ts:490](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L490)
 
 ___
 
@@ -833,7 +861,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:42](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L42)
+[lib/player.ts:42](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L42)
 
 ___
 
@@ -847,7 +875,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:428](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L428)
+[lib/player.ts:428](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L428)
 
 ___
 
@@ -861,7 +889,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:511](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L511)
+[lib/player.ts:511](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L511)
 
 ___
 
@@ -875,7 +903,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:561](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L561)
+[lib/player.ts:561](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L561)
 
 ___
 
@@ -889,7 +917,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:651](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L651)
+[lib/player.ts:651](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L651)
 
 ___
 
@@ -903,7 +931,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:659](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L659)
+[lib/player.ts:659](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L659)
 
 ___
 
@@ -917,7 +945,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:549](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L549)
+[lib/player.ts:549](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L549)
 
 ___
 
@@ -931,7 +959,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:534](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L534)
+[lib/player.ts:534](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L534)
 
 ___
 
@@ -945,7 +973,7 @@ ___
 
 #### Defined in
 
-[lib/player.ts:709](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L709)
+[lib/player.ts:709](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L709)
 
 ___
 
@@ -959,4 +987,4 @@ ___
 
 #### Defined in
 
-[lib/player.ts:526](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/player.ts#L526)
+[lib/player.ts:526](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/player.ts#L526)

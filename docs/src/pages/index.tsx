@@ -1,9 +1,11 @@
+/// <reference types="@docusaurus/module-type-aliases" />
+
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageFeatures from '../components/HomepageFeatures';
 
 import styles from './index.module.css';
 
@@ -21,11 +23,11 @@ function HomepageHeader() {
             to="/docs/tutorial">
             Get Started
           </Link>
-          <Link
+          <a
             className={`button button--secondary button--lg ${styles.button2}`}
-            to="/release/latest.zip">
+            href="/release/latest.zip">
             Download
-          </Link>
+          </a>
         </div>
       </div>
     </header>

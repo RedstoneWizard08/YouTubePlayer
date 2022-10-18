@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/types.ts:3](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L3)
+[lib/types.ts:3](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L3)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[lib/types.ts:2](https://github.com/RedstoneWizard08/YouTubePlayer/blob/efef6d9/lib/types.ts#L2)
+[lib/types.ts:2](https://github.com/RedstoneWizard08/YouTubePlayer/blob/f74ca40/lib/types.ts#L2)
